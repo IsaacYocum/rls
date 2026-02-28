@@ -1,0 +1,13 @@
+[package]
+name = "rls"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+
+[profile.release]
+opt-level = "z"  # Optimize for size ("s" is another option to experiment with)
+strip = true     # Automatically strip symbols from the binary
+lto = true       # Enable Link Time Optimization
+codegen-units = 1 # Reduce the number of parallel code generation units for better cross-module optimization
+panic = "abort"  # Abort on panic to avoid including unwinding code
