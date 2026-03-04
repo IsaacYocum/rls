@@ -1,1 +1,1 @@
-RUSTFLAGS="-Dwarnings" cargo clean && cargo build --release && ./target/release/rls
+RUSTFLAGS="-Dwarnings" cargo clean && cargo build --release 
